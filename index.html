@@ -1,0 +1,218 @@
+<!DOCTYPE html>
+<html lang="ru" class="scroll-smooth">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>NexusTech — Будущее сегодня</title>
+    <!-- Tailwind CSS CDN -->
+    <script src="https://cdn.tailwindcss.com"></script>
+    <!-- Google Fonts: Inter -->
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;600;700&display=swap" rel="stylesheet">
+    <!-- Lucide Icons -->
+    <script src="https://unpkg.com/lucide@latest"></script>
+    <style>
+        body { font-family: 'Inter', sans-serif; }
+        .glass {
+            background: rgba(255, 255, 255, 0.03);
+            backdrop-filter: blur(10px);
+            border: 1px solid rgba(255, 255, 255, 0.1);
+        }
+        .gradient-text {
+            background: linear-gradient(90deg, #60a5fa, #a855f7);
+            -webkit-background-clip: text;
+            -webkit-text-fill-color: transparent;
+        }
+    </style>
+</head>
+<body class="bg-[#0f172a] text-gray-200 selection:bg-blue-500/30">
+
+    <!-- Header -->
+    <header class="fixed w-full z-50 transition-all duration-300" id="navbar">
+        <nav class="container mx-auto px-6 py-4 flex justify-between items-center">
+            <div class="flex items-center gap-2 group cursor-pointer">
+                <div class="bg-blue-600 p-2 rounded-lg group-hover:rotate-12 transition-transform">
+                    <i data-lucide="layers" class="text-white w-6 h-6"></i>
+                </div>
+                <span class="text-xl font-bold tracking-tight text-white">NEXUS<span class="text-blue-500">TECH</span></span>
+            </div>
+
+            <!-- Desktop Menu -->
+            <div class="hidden md:flex items-center gap-8 text-sm font-medium">
+                <a href="#features" class="hover:text-blue-400 transition-colors">Функции</a>
+                <a href="#stats" class="hover:text-blue-400 transition-colors">Статистика</a>
+                <a href="#pricing" class="hover:text-blue-400 transition-colors">Тарифы</a>
+                <button class="bg-blue-600 hover:bg-blue-700 text-white px-5 py-2 rounded-full transition-all transform hover:scale-105 active:scale-95 shadow-lg shadow-blue-500/20">
+                    Начать работу
+                </button>
+            </div>
+
+            <!-- Mobile Toggle -->
+            <button class="md:hidden text-white" id="menuBtn">
+                <i data-lucide="menu" id="menuIcon"></i>
+            </button>
+        </nav>
+
+        <!-- Mobile Menu Overlay -->
+        <div id="mobileMenu" class="hidden md:hidden absolute top-full left-0 w-full glass p-6 flex flex-col gap-4 border-t border-white/10">
+            <a href="#features" class="text-lg py-2">Функции</a>
+            <a href="#stats" class="text-lg py-2">Статистика</a>
+            <a href="#pricing" class="text-lg py-2">Тарифы</a>
+            <button class="bg-blue-600 text-white py-3 rounded-xl">Попробовать бесплатно</button>
+        </div>
+    </header>
+
+    <main>
+        <!-- Hero Section -->
+        <section class="relative pt-32 pb-20 md:pt-48 md:pb-32 overflow-hidden">
+            <div class="absolute -top-24 -right-24 w-96 h-96 bg-blue-600/20 rounded-full blur-[120px]"></div>
+            <div class="absolute top-1/2 -left-24 w-72 h-72 bg-purple-600/10 rounded-full blur-[100px]"></div>
+
+            <div class="container mx-auto px-6 text-center relative z-10">
+                <span class="px-4 py-1.5 rounded-full border border-blue-500/30 bg-blue-500/10 text-blue-400 text-xs font-bold uppercase tracking-widest inline-block mb-6">
+                    Версия 2.0 уже доступна
+                </span>
+                <h1 class="text-5xl md:text-7xl font-bold text-white mb-8 leading-tight">
+                    Управляйте данными <br>
+                    <span class="gradient-text">нового поколения</span>
+                </h1>
+                <p class="text-gray-400 text-lg md:text-xl max-w-2xl mx-auto mb-10 leading-relaxed">
+                    NexusTech объединяет мощную аналитику и интуитивный дизайн, чтобы ваш бизнес рос быстрее, чем когда-либо.
+                </p>
+                <div class="flex flex-col sm:flex-row justify-center gap-4">
+                    <button class="bg-blue-600 hover:bg-blue-700 text-white px-8 py-4 rounded-xl font-semibold transition-all shadow-xl shadow-blue-600/20">
+                        Попробовать сейчас
+                    </button>
+                    <button class="glass hover:bg-white/10 text-white px-8 py-4 rounded-xl font-semibold transition-all">
+                        Смотреть демо
+                    </button>
+                </div>
+            </div>
+        </section>
+
+        <!-- Features Grid -->
+        <section id="features" class="py-20 bg-[#0f172a]">
+            <div class="container mx-auto px-6">
+                <div class="text-center mb-16">
+                    <h2 class="text-3xl md:text-4xl font-bold text-white mb-4">Почему выбирают нас?</h2>
+                    <p class="text-gray-400">Всё, что нужно для масштабирования в одном месте</p>
+                </div>
+
+                <div class="grid md:grid-cols-3 gap-8">
+                    <!-- Feature 1 -->
+                    <div class="glass p-8 rounded-2xl hover:border-blue-500/50 transition-all group">
+                        <div class="w-12 h-12 bg-blue-500/20 rounded-lg flex items-center justify-center mb-6 text-blue-400 group-hover:scale-110 transition-transform">
+                            <i data-lucide="zap"></i>
+                        </div>
+                        <h3 class="text-xl font-bold text-white mb-3">Скорость света</h3>
+                        <p class="text-gray-400 leading-relaxed">Обработка миллионов запросов в секунду без задержек и потерь.</p>
+                    </div>
+
+                    <!-- Feature 2 -->
+                    <div class="glass p-8 rounded-2xl hover:border-purple-500/50 transition-all group border border-white/5">
+                        <div class="w-12 h-12 bg-purple-500/20 rounded-lg flex items-center justify-center mb-6 text-purple-400 group-hover:scale-110 transition-transform">
+                            <i data-lucide="shield"></i>
+                        </div>
+                        <h3 class="text-xl font-bold text-white mb-3">Безопасность</h3>
+                        <p class="text-gray-400 leading-relaxed">Сквозное шифрование и защита данных по стандарту корпораций.</p>
+                    </div>
+
+                    <!-- Feature 3 -->
+                    <div class="glass p-8 rounded-2xl hover:border-green-500/50 transition-all group">
+                        <div class="w-12 h-12 bg-green-500/20 rounded-lg flex items-center justify-center mb-6 text-green-400 group-hover:scale-110 transition-transform">
+                            <i data-lucide="bar-chart-3"></i>
+                        </div>
+                        <h3 class="text-xl font-bold text-white mb-3">Аналитика</h3>
+                        <p class="text-gray-400 leading-relaxed">Глубокие инсайты в реальном времени для принятия решений.</p>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- Stats Section -->
+        <section id="stats" class="py-20 relative">
+            <div class="container mx-auto px-6">
+                <div class="glass rounded-3xl p-12 grid md:grid-cols-4 gap-8 text-center border-white/5">
+                    <div>
+                        <div class="text-4xl font-bold text-white mb-2">99.9%</div>
+                        <div class="text-sm text-gray-500 uppercase tracking-widest">Uptime</div>
+                    </div>
+                    <div>
+                        <div class="text-4xl font-bold text-white mb-2">24/7</div>
+                        <div class="text-sm text-gray-500 uppercase tracking-widest">Поддержка</div>
+                    </div>
+                    <div>
+                        <div class="text-4xl font-bold text-white mb-2">150+</div>
+                        <div class="text-sm text-gray-500 uppercase tracking-widest">Интеграций</div>
+                    </div>
+                    <div>
+                        <div class="text-4xl font-bold text-white mb-2">10M+</div>
+                        <div class="text-sm text-gray-500 uppercase tracking-widest">Пользователей</div>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- Contact Section -->
+        <section class="py-20">
+            <div class="container mx-auto px-6 max-w-4xl">
+                <div class="glass p-10 rounded-3xl relative overflow-hidden">
+                    <div class="relative z-10">
+                        <h2 class="text-3xl font-bold text-white mb-6">Готовы обсудить проект?</h2>
+                        <div class="flex flex-col md:flex-row gap-4">
+                            <input type="email" placeholder="Ваш email" class="flex-1 bg-white/5 border border-white/10 rounded-xl px-6 py-4 outline-none focus:border-blue-500 transition-colors text-white">
+                            <button onclick="handleSubmit()" class="bg-white text-black font-bold px-8 py-4 rounded-xl hover:bg-gray-200 transition-colors">
+                                Отправить
+                            </button>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+    </main>
+
+    <footer class="py-12 border-t border-white/5 mt-10">
+        <div class="container mx-auto px-6 text-center">
+            <div class="flex justify-center gap-6 mb-8 text-gray-500">
+                <a href="#" class="hover:text-white transition-colors"><i data-lucide="github"></i></a>
+                <a href="#" class="hover:text-white transition-colors"><i data-lucide="twitter"></i></a>
+                <a href="#" class="hover:text-white transition-colors"><i data-lucide="linkedin"></i></a>
+            </div>
+            <p class="text-gray-500 text-sm">© 2023 NexusTech Inc. Все права защищены.</p>
+        </div>
+    </footer>
+
+    <script>
+        // Инициализация иконок Lucide
+        lucide.createIcons();
+
+        // Скролл-эффект для Navbar
+        const navbar = document.getElementById('navbar');
+        window.addEventListener('scroll', () => {
+            if (window.scrollY > 20) {
+                navbar.classList.add('glass', 'py-2');
+                navbar.classList.remove('py-4');
+            } else {
+                navbar.classList.remove('glass', 'py-2');
+                navbar.classList.add('py-4');
+            }
+        });
+
+        // Мобильное меню
+        const menuBtn = document.getElementById('menuBtn');
+        const mobileMenu = document.getElementById('mobileMenu');
+        const menuIcon = document.getElementById('menuIcon');
+
+        menuBtn.addEventListener('click', () => {
+            mobileMenu.classList.toggle('hidden');
+            const isHidden = mobileMenu.classList.contains('hidden');
+            menuIcon.setAttribute('data-lucide', isHidden ? 'menu' : 'x');
+            lucide.createIcons();
+        });
+
+        // Имитация отправки формы
+        function handleSubmit() {
+            alert('Спасибо! Мы свяжемся с вами в ближайшее время.');
+        }
+    </script>
+</body>
+</html>
